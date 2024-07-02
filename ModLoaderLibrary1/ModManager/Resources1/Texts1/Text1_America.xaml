@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="res_Text1_ModName">Mod Manager</sys:String>
+
+    <sys:String x:Key="res_Text1_mainPageTitle">Mod List</sys:String>
+    <sys:String x:Key="res_Text1_mainPageTitle2">Mod Settings</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_Title_Buttons1_RefreshList_﻿ToolTip">refresh list</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_Title_Buttons1_ReloadMod_﻿ToolTip">reload mod(suggest restarting the software)</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_Title_Buttons1_SelectAll_﻿ToolTip">select all</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_Title2_Buttons1_SelectAll_﻿ToolTip">save</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Title_TextBlock1">&#160;</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Title_TextBlock2">&#160;mod has been selected</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Buttons1_DeselectAll">deselect all</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Buttons1_ModDelete">delete mod</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Buttons1_ModDisable">disable mod</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Buttons1_ModEnable">enable mod</sys:String>
+    
+    <sys:String x:Key="res_Text1_modItem1_openModFolder">open mod folder</sys:String>
+    <sys:String x:Key="res_Text1_modItem1_settings">settings(mod that have been loaded and inherit API are available)</sys:String>
+    <sys:String x:Key="res_Text1_modItem1_disableMod">disable mod</sys:String>
+    <sys:String x:Key="res_Text1_modItem1_enable">enable mod</sys:String>
+    <sys:String x:Key="res_Text1_modItem1_deleteMod">delete mod</sys:String>
+    
+    <sys:String x:Key="res_Text1_TS_message1">failed to load mod</sys:String>
+    <sys:String x:Key="res_Text1_TS_message2">refreshed</sys:String>
+    <sys:String x:Key="res_Text1_TS_message3">the folder does not exist</sys:String>
+    <sys:String x:Key="res_Text1_TS_message4">mod does not exist</sys:String>
+    <sys:String x:Key="res_Text1_TS_message5">please disable mod first</sys:String>
+    <sys:String x:Key="res_Text1_TS_message6">mod in use, please disable and reload mod first</sys:String>
+    <sys:String x:Key="res_Text1_TS_message7">mod has been reloaded</sys:String>
+    <sys:String x:Key="res_Text1_TS_message8">data exception, mod configured key is null</sys:String>
+    <sys:String x:Key="res_Text1_TS_message9">mod not loaded</sys:String>
+    <sys:String x:Key="res_Text1_TS_message10">mod does not inherit API</sys:String>
+    <sys:String x:Key="res_Text1_TS_message11">saved</sys:String>
+    <sys:String x:Key="res_Text1_TS_message12">save failed</sys:String>
+    <sys:String x:Key="res_Text1_TS_message13">installation successful</sys:String>
+    <sys:String x:Key="res_Text1_TS_message14">installation failed</sys:String>
+    <sys:String x:Key="res_Text1_TS_message15">the configuration file for mod is incorrect</sys:String>
+
+</ResourceDictionary>

@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--容器-->
+
+    <Style x:Key="Container2"  TargetType="{x:Type ContentControl}">
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="{DynamicResource Res1.Colors1.Styles1.Style1.Container1.Back1}"/>
+        <Setter Property="Padding" Value="6"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContentControl}">
+                    <Grid>
+                        <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                            <Border.Effect>
+                                <!--模糊半径, 阴影深度, 角度, 不透明度-->
+                                <DropShadowEffect BlurRadius="10" ShadowDepth="0" Direction="0" Opacity="0.4"/>
+                            </Border.Effect>
+                        </Border>
+                        
+                        <Border Padding="{TemplateBinding Padding}" CornerRadius="6" Background="{TemplateBinding Background}">
+                            <ContentPresenter/>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

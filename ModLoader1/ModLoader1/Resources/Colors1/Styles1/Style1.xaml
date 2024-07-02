@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Back1" Color="#C7D7EE"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Fore1" Color="#116FCE"/>
+
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Button1.Back1" Color="DimGray"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Button1.Fore1" Color="#116FCE"/>
+
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Button2.Fore1" Color="#116FCE"/>
+
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Button4.Fore1" Color="DimGray"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Button4.Fore1.IsMouseOver" Color="#116FCE"/>
+
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Container1.Back1" Color="White"/>
+
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.ScrollViewer1.Back1" Color="White"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.ScrollViewer1.ScrollBar1.Back1" Color="#116FCE"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.ScrollViewer1.ScrollBar1.Fore1" Color="#FF6BB4F0"/>
+
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.ContextMenu1.Back1" Color="White"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.ContextMenu1.Bord1" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.MenuItem1.Fore1" Color="DimGray"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.MenuItem1.IsMouseOver.Back1" Color="#90c8f6"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.MenuItem1.IsMouseOver.Fore1" Color="White"/>
+
+</ResourceDictionary>

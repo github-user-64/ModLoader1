@@ -1,0 +1,24 @@
+﻿<RadioButton x:Class="desktopPet1_minecraft_Inventory.PublicClass.UserControls.Backpacks.Backpacks_RadioButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             FocusVisualStyle="{x:Null}"
+             Height="128" Width="112"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <RadioButton.Template>
+        <ControlTemplate TargetType="{x:Type RadioButton}">
+            <Border Background="Transparent">
+                <!--ContentPresenter Name="a1" Visibility="Hidden"/-->
+                <Image Name="a1" Visibility="Collapsed" Source="/desktopPet1_minecraft_Inventory;component/Resources/Images/Backpacks/RadioButton_Checked.png"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsChecked" Value="true">
+                    <Setter TargetName="a1" Property="Visibility" Value="Visible"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </RadioButton.Template>
+</RadioButton>

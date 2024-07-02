@@ -1,0 +1,30 @@
+﻿<!--
+你在这里写的东西会添加到主界面上，如果你写了啥奇奇怪怪的东西导致程序炸了那就把所有的自定义文件删了就行。
+在启用自定义界面后，就会在这个文件夹下依次加载[
+Custom_Top1.xaml,
+Custom_Top2.xaml,
+Custom_Top.....xaml
+]这些文件里的内容到界面。 Custom_Bottom*.xaml和Custom_Top*.xaml一样，不过Bottom会被添加到桌宠的下方，而Top会添加到上方。
+哦，对了这是WPF的界面代码，写完记得保存，然后再重新加载mod或者在mod设置界面刷新就可以生效了。
+
+:)
+
+顺便放些常用的属性，详细的搜索 "WPF xxx" 就好了:
+Width="0"//宽度
+Height="0"//高度
+Margin="0,0,0,0"//边距
+Background="#123456"//背景色
+Foreground="#123456"//字体颜色
+FontSize="0"//字体大小
+HorizontalAlignment="Left"//水平对齐方式(对齐方式有Left,Center,Right,Stretch)
+VerticalAlignment="Top"//垂直对齐方式(对齐方式有Top,Center,Bottom,Stretch)
+
+<Button Content="按钮"/>
+<TextBlock Text="可以写文本"/>
+<Grid><TextBlock Text="这是容器里面的TextBlock"/></Grid>
+<StackPanel></StackPanel>//会垂直排列的容器，设置Orientation="Horizontal"可以水平排列
+<WrapPanel></WrapPanel>//会自动排列的容器
+-->
+
+<!--上面的都是注释, 可以删掉-->
+<!--到底了，记得保存～(∠・ω )⌒☆-->

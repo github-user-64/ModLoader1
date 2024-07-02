@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E414FC03-2D34-4089-B5A3-4E32C562BECE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>desktopPet1</RootNamespace>
+    <AssemblyName>desktopPet1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\ModLoader1\ModLoader1\bin\Debug\File1\mods\desktopPet1\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="desktopPet1_Front">
+      <HintPath>..\..\..\..\ModLoader1\ModLoader1\bin\Debug\File1\mods\desktopPet1_Front\desktopPet1_Front.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PublicLibrary1">
+      <HintPath>..\..\..\..\ModLoader1\ModLoader1\bin\Debug\File1\bin\PublicLibrary1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1\Class1_Class1.cs" />
+    <Compile Include="Class1\Class1_Api1.cs" />
+    <Compile Include="Class1\Class1_Api_ModSettings.cs" />
+    <Compile Include="Class1\Class1_Api2.cs" />
+    <Compile Include="Class1\Class1_Attribute.cs" />
+    <Compile Include="Class1\Class1_EventHandle..cs" />
+    <Compile Include="Class1\Class1_Event.cs" />
+    <Compile Include="Class1\Class1_Initialize.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass1\Apis\IWindow1.cs" />
+    <Compile Include="PublicClass1\ModSettings\class1.cs" />
+    <Compile Include="PublicClass1\ModSettings\modSettingsData.cs" />
+    <Compile Include="PublicClass1\ModSettings\ModSettingsUI.xaml.cs">
+      <DependentUpon>ModSettingsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass1\Mod\Config1.cs" />
+    <Compile Include="PublicClass1\Timer\Timer1.cs" />
+    <Compile Include="PublicClass1\Datas\ExpansionObject.cs" />
+    <Compile Include="PublicClass1\UserControls\Button1\Button1.xaml.cs">
+      <DependentUpon>Button1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass1\UserControls\ManagerWindow\ManagerWindow.xaml.cs">
+      <DependentUpon>ManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass1\UserControls\ManagerWindow\ManagerWindow_Attribute.cs" />
+    <Compile Include="PublicClass1\UserControls\ManagerWindow\ManagerWindow_Event.cs" />
+    <Compile Include="PublicClass1\UserControls\ManagerWindow\ManagerWindow_Initialize.cs" />
+    <Compile Include="PublicClass1\UserControls\ManagerWindow\ManagerWindow_EventHandle.cs" />
+    <Compile Include="PublicClass1\UserControls\ManagerWindow\ManagerWindow_Class1.cs" />
+    <Compile Include="PublicClass1\UserControls\MyButton1.cs" />
+    <Compile Include="PublicClass1\WinApi\Apis\api1.cs" />
+    <Compile Include="PublicClass1\WinApi\Class1\Class1.cs" />
+    <Compile Include="PublicClass1\WinApi\Class1\WindowPenetration.cs" />
+    <Compile Include="PublicClass1\WinApi\Class1\WindowPlaces\Dependency1.cs" />
+    <Compile Include="PublicClass1\WinApi\Class1\WindowPlaces\Places.cs" />
+    <Compile Include="PublicClass1\WinApi\Class1\WindowPlaces\WindowPlaces_.cs" />
+    <Compile Include="PublicClass1\WinApi\Class1\WindowPlaces\WindowPlaces.cs" />
+    <Compile Include="PublicClass1\Windows\PetWindow\PetWindow.xaml.cs">
+      <DependentUpon>PetWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass1\Windows\PetWindow\PetWindow_Api_IWindow.cs" />
+    <Compile Include="PublicClass1\Windows\PetWindow\PetWindow_Attribute.cs" />
+    <Compile Include="Resources\Dictionarys\Label\Label_ToolTip1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\Dictionarys\Button\MyButton1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Button\Button1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\CheckBox\CheckBox1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PublicClass1\ModSettings\ModSettingsUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PublicClass1\UserControls\Button1\Button1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PublicClass1\UserControls\ManagerWindow\ManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PublicClass1\Windows\PetWindow\PetWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Colors\Styles\Style1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Button\Button2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Container\Container2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Container\ContentControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Label\Label1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\ScrollViewer\ScrollViewer1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Thumb1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Texts\Text_China.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ValueIsNull\a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\iconfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom_Bottom1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom_Top1.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

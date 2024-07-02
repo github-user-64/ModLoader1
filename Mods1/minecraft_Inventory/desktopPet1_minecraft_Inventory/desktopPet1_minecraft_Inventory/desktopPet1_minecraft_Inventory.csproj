@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{503E224E-02CA-4CFA-8723-DBD6DF91D225}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>desktopPet1_minecraft_Inventory</RootNamespace>
+    <AssemblyName>desktopPet1_minecraft_Inventory</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\ModLoader1\ModLoader1\bin\Debug\File1\mods\minecraft_Inventory\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="desktopPet1_Front">
+      <HintPath>..\..\..\..\ModLoader1\ModLoader1\bin\Debug\File1\mods\desktopPet1_Front\desktopPet1_Front.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PublicLibrary1">
+      <HintPath>..\..\..\..\ModLoader1\ModLoader1\bin\Debug\File1\bin\PublicLibrary1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1\Class1_Api_Mod.cs" />
+    <Compile Include="Class1\Class1_Class2.cs" />
+    <Compile Include="Class1\Class1_Class1.cs" />
+    <Compile Include="Class1\Class1_ExpansionPet.cs" />
+    <Compile Include="Class1\Class1_Api_ModSettings.cs" />
+    <Compile Include="Class1\Class1_DataSaveAndReads.cs" />
+    <Compile Include="Class1\Class1_Attribute.cs" />
+    <Compile Include="Class1\Class1_Initialize.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicClass\Datas\Apis\DataAndObject.cs" />
+    <Compile Include="PublicClass\Datas\InventoryItemData.cs" />
+    <Compile Include="PublicClass\Events\Event_Drag.cs" />
+    <Compile Include="PublicClass\InventoryItem\InventoryItemObject.cs" />
+    <Compile Include="PublicClass\InventoryItem\Base\InventoryItem.cs" />
+    <Compile Include="PublicClass\Inventory\Base\Inventory_.cs" />
+    <Compile Include="PublicClass\Inventory\Base\Inventory.cs" />
+    <Compile Include="PublicClass\Inventory\InventoryObject.cs" />
+    <Compile Include="PublicClass\Inventory\InventoryObjects.cs" />
+    <Compile Include="PublicClass\IO\File\Apis\DataSaveAndRead.cs" />
+    <Compile Include="PublicClass\IO\File\Choice.cs" />
+    <Compile Include="PublicClass\ActionCD.cs" />
+    <Compile Include="PublicClass\IO\Folder\Choice.cs" />
+    <Compile Include="PublicClass\IO\Folder\FolderSelectDialog.cs" />
+    <Compile Include="PublicClass\IO\GetIco.cs" />
+    <Compile Include="PublicClass\ScaleTransform\Apis\ScaleTransform1.cs" />
+    <Compile Include="PublicClass\Settings\Mod\class1.cs" />
+    <Compile Include="PublicClass\UserControls\BackpackItem\BackpackItem1.xaml.cs">
+      <DependentUpon>BackpackItem1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass\UserControls\Backpacks\Backpacks1_Attribute.cs" />
+    <Compile Include="PublicClass\UserControls\Backpacks\Backpacks1_Class1.cs" />
+    <Compile Include="PublicClass\UserControls\Backpacks\Backpacks1_Api_ScaleTransform.cs" />
+    <Compile Include="PublicClass\UserControls\Backpacks\Backpacks1_Initialize.cs" />
+    <Compile Include="PublicClass\UserControls\Backpacks\Backpacks1_EventHandle.cs" />
+    <Compile Include="PublicClass\UserControls\Backpacks\Backpacks1_Event.cs" />
+    <Compile Include="PublicClass\UserControls\Backpacks\Backpacks1.xaml.cs">
+      <DependentUpon>Backpacks1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass\UserControls\Backpacks_RadioButton\Backpacks_RadioButton.xaml.cs">
+      <DependentUpon>Backpacks_RadioButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass\UserControls\Backpack\Backpack1.xaml.cs">
+      <DependentUpon>Backpack1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass\UserControls\Backpack\Backpack1_Class1.cs" />
+    <Compile Include="PublicClass\UserControls\Backpack\Backpack1_Attribute.cs" />
+    <Compile Include="PublicClass\UserControls\Backpack\Backpack1_Api_ScaleTransform.cs" />
+    <Compile Include="PublicClass\UserControls\Backpack\Backpack1_Initialize.cs" />
+    <Compile Include="PublicClass\UserControls\Backpack\Backpack1_EventHandle..cs" />
+    <Compile Include="PublicClass\UserControls\Backpack\Backpack1_Event.cs" />
+    <Compile Include="PublicClass\UserControls\Inventory\Inventory1_Api_ScaleTransform.cs" />
+    <Compile Include="PublicClass\UserControls\Tip\ToolTip1.cs" />
+    <Compile Include="PublicClass\UserControls\Tip\ToolTip_InventoryItem.cs" />
+    <Compile Include="Resources\Dictionarys\Settings_Mod\Label\Label_ToolTip1.cs" />
+    <Compile Include="PublicClass\Settings\Mod\modSettingsData.cs" />
+    <Compile Include="PublicClass\PetObjects\container.cs" />
+    <Compile Include="PublicClass\Settings\Mod\ModSettingsUI.xaml.cs">
+      <DependentUpon>ModSettingsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass\UserControls\Inventory\Inventory1.xaml.cs">
+      <DependentUpon>Inventory1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass\UserControls\InventoryItem\InventoryItem1.xaml.cs">
+      <DependentUpon>InventoryItem1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PublicClass\UserControls\Inventory\Inventory1_Event.cs" />
+    <Compile Include="PublicClass\UserControls\Inventory\Inventory1_Initialize.cs" />
+    <Compile Include="PublicClass\UserControls\Inventory\Inventory1_EventHandle..cs" />
+    <Compile Include="PublicClass\UserControls\Tip\ToolTip_Content.xaml.cs">
+      <DependentUpon>ToolTip_Content.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Inventory\item_border.png" />
+    <Resource Include="Resources\Images\Inventory\item_bottom.png" />
+    <Resource Include="Resources\Images\Inventory\item_select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="PublicClass\UserControls\BackpackItem\BackpackItem1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PublicClass\UserControls\Backpacks\Backpacks1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PublicClass\UserControls\Backpacks_RadioButton\Backpacks_RadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PublicClass\UserControls\Backpack\Backpack1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Dictionarys\Container\Container2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Settings_Mod\Button1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Settings_Mod\CheckBox1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Settings_Mod\ContentControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Settings_Mod\Label\Label1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Settings_Mod\Slider1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PublicClass\Settings\Mod\ModSettingsUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PublicClass\UserControls\Inventory\Inventory1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PublicClass\UserControls\InventoryItem\InventoryItem1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PublicClass\UserControls\Tip\ToolTip_Content.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Dictionarys\Container\Container1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\ContextMenus\ContextMenu1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\TextBox\TextBox1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionarys\Thumb1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ValueIsNull\a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Inventory\item_ico_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Backpack\border_bottom.png" />
+    <Resource Include="Resources\Images\Backpack\border_left.png" />
+    <Resource Include="Resources\Images\Backpack\border_right.png" />
+    <Resource Include="Resources\Images\Backpack\border_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\5_Minecraft AE%28支持中文%29.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Backpack\border_left_bottom.png" />
+    <Resource Include="Resources\Images\Backpack\border_left_top.png" />
+    <Resource Include="Resources\Images\Backpack\border_right_bottom.png" />
+    <Resource Include="Resources\Images\Backpack\border_right_top.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Images\Backpacks\item1_ico.png" />
+    <Resource Include="Resources\Images\Backpacks\item2_ico.png" />
+    <Resource Include="Resources\Images\Backpacks\item3_ico.png" />
+    <Resource Include="Resources\Images\Backpacks\item4_ico.png" />
+    <Resource Include="Resources\Images\Backpacks\RadioButton.png" />
+    <Resource Include="Resources\Images\Backpacks\RadioButton_Checked.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

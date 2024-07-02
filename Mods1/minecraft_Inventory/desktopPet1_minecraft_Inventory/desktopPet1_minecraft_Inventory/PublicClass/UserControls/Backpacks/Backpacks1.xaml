@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="desktopPet1_minecraft_Inventory.PublicClass.UserControls.Backpacks.Backpacks1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:desktopPet1_minecraft_Inventory.PublicClass.UserControls.Backpacks"
+             mc:Ignorable="d" 
+             RenderOptions.BitmapScalingMode="NearestNeighbor"
+             d:DesignHeight="450" d:DesignWidth="800"
+             Focusable="True"
+             FocusVisualStyle="{x:Null}"
+             HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/desktopPet1_minecraft_Inventory;component/Resources/Dictionarys/Container/Container2.xaml"/>
+                <ResourceDictionary Source="/desktopPet1_minecraft_Inventory;component/Resources/Dictionarys/TextBox/TextBox1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <!--不设置Auto的话, 那在背包高度过高的情况下不知道为什么会被裁切-->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Image}">
+                    <Setter Property="Width" Value="112"/>
+                    <Setter Property="Height" Value="128"/>
+                    <Setter Property="Margin" Value="0,0,4,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <Image Source="/desktopPet1_minecraft_Inventory;component/Resources/Images/Backpacks/RadioButton.png"/>
+            <Image Source="/desktopPet1_minecraft_Inventory;component/Resources/Images/Backpacks/RadioButton.png"/>
+            <Image Source="/desktopPet1_minecraft_Inventory;component/Resources/Images/Backpacks/RadioButton.png"/>
+            <Image Source="/desktopPet1_minecraft_Inventory;component/Resources/Images/Backpacks/RadioButton.png"/>
+        </StackPanel>
+
+        <ContentControl Grid.Row="1" Margin="0,-16,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{DynamicResource Container2}">
+            <StackPanel>
+                <TextBox Name="Title_TextBox1" Width="{Binding ElementName=Backpack_Container, Path=ActualWidth}" FontSize="22" Foreground="#404040" FontFamily="/desktopPet1_minecraft_Inventory;component/Resources/Fonts/#Minecraft AE Pixel" Style="{DynamicResource TextBox1}" TextChanged="e_Title_TextBox1_TextChanged" KeyUp="e_Title_TextBox1_KeyUp"/>
+                <Border Name="Backpack_Container" Margin="0,12,0,0"/>
+            </StackPanel>
+        </ContentControl>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type local:Backpacks_RadioButton}">
+                    <Setter Property="Margin" Value="0,0,4,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <local:Backpacks_RadioButton x:Name="Backpacks_RadioButton1" Checked="e_Backpacks_RadioButton1_Checked"/>
+            <local:Backpacks_RadioButton x:Name="Backpacks_RadioButton2" Checked="e_Backpacks_RadioButton2_Checked"/>
+            <local:Backpacks_RadioButton x:Name="Backpacks_RadioButton3" Checked="e_Backpacks_RadioButton3_Checked"/>
+            <local:Backpacks_RadioButton x:Name="Backpacks_RadioButton4" Checked="e_Backpacks_RadioButton4_Checked"/>
+        </StackPanel>
+
+        <StackPanel IsHitTestVisible="False" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Image}">
+                    <Setter Property="Width" Value="56"/>
+                    <Setter Property="Height" Value="64"/>
+                    <Setter Property="Margin" Value="28,36,32,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <Image Source="/desktopPet1_minecraft_Inventory;component/Resources/Images/Backpacks/item1_ico.png"/>
+            <Image Source="/desktopPet1_minecraft_Inventory;component/Resources/Images/Backpacks/item2_ico.png"/>
+            <Image Source="/desktopPet1_minecraft_Inventory;component/Resources/Images/Backpacks/item3_ico.png"/>
+            <Image Source="/desktopPet1_minecraft_Inventory;component/Resources/Images/Backpacks/item4_ico.png"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

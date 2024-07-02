@@ -1,0 +1,43 @@
+﻿<local:PetObject x:Class="desktopPet1_expansion_ldnn.PublicClass1.PetObjects.ldnn.message"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:desktopPet1_Front.Pet;assembly=desktopPet1_Front"
+             mc:Ignorable="d" 
+                 Width="NaN" Height="NaN" Background="Transparent" Visibility="Hidden">
+
+    <Grid Margin="0,0,0,20">
+        <Grid.Resources>
+            <SolidColorBrush x:Key="bubble_back" Color="White"/>
+            <SolidColorBrush x:Key="bubble_bord" Color="Gainsboro"/>
+            <SolidColorBrush x:Key="bubble_fore" Color="DimGray"/>
+        </Grid.Resources>
+
+        <Grid RenderTransformOrigin="0.5,0.5" MinWidth="45">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform x:Name="bubble_background_grid_ScaleTransform" ScaleX="1"/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            
+            <Border Width="20" Height="20" Background="{DynamicResource bubble_bord}" RenderTransformOrigin="0.5,0.5" Margin="8,0,0,-4" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="64"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+            <Border Background="{DynamicResource bubble_back}" BorderBrush="{DynamicResource bubble_bord}" BorderThickness="1" CornerRadius="6"/>
+            <Border Width="18" Height="18" Background="{DynamicResource bubble_back}" RenderTransformOrigin="0.5,0.5" Margin="9,0,0,-3" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="64"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+        </Grid>
+
+        <TextBlock Name="bubble_message_TextBlock" Foreground="{DynamicResource bubble_fore}" FontSize="15" Margin="6" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</local:PetObject>

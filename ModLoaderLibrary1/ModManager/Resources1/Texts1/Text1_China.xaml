@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="res_Text1_ModName">Mod 管理器</sys:String>
+
+    <sys:String x:Key="res_Text1_mainPageTitle">Mod 列表</sys:String>
+    <sys:String x:Key="res_Text1_mainPageTitle2">Mod 设置</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_Title_Buttons1_RefreshList_﻿ToolTip">刷新列表</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_Title_Buttons1_ReloadMod_﻿ToolTip">重新加载mod(建议重启软件)</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_Title_Buttons1_SelectAll_﻿ToolTip">全选</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_Title2_Buttons1_Save_﻿ToolTip">保存</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Title_TextBlock1">已选则&#160;</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Title_TextBlock2">&#160;个mod</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Buttons1_DeselectAll">取消选择</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Buttons1_ModDelete">删除</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Buttons1_ModDisable">禁用</sys:String>
+    <sys:String x:Key="res_Text1_mainPage_OperationWindow1_Buttons1_ModEnable">启用</sys:String>
+    
+    <sys:String x:Key="res_Text1_modItem1_openModFolder">打开mod位置</sys:String>
+    <sys:String x:Key="res_Text1_modItem1_settings">设置(已加载且有继承api的mod可用)</sys:String>
+    <sys:String x:Key="res_Text1_modItem1_disableMod">禁用mod</sys:String>
+    <sys:String x:Key="res_Text1_modItem1_enable">启用mod</sys:String>
+    <sys:String x:Key="res_Text1_modItem1_deleteMod">删除mod</sys:String>
+    
+    <sys:String x:Key="res_Text1_TS_message1">加载mod失败</sys:String>
+    <sys:String x:Key="res_Text1_TS_message2">已刷新</sys:String>
+    <sys:String x:Key="res_Text1_TS_message3">文件夹不存在</sys:String>
+    <sys:String x:Key="res_Text1_TS_message4">mod不存在</sys:String>
+    <sys:String x:Key="res_Text1_TS_message5">请先禁用mod</sys:String>
+    <sys:String x:Key="res_Text1_TS_message6">mod正在使用, 请先禁用并重新加载mod</sys:String>
+    <sys:String x:Key="res_Text1_TS_message7">mod已重新加载</sys:String>
+    <sys:String x:Key="res_Text1_TS_message8">数据异常, mod配置的key为null</sys:String>
+    <sys:String x:Key="res_Text1_TS_message9">mod未加载</sys:String>
+    <sys:String x:Key="res_Text1_TS_message10">mod未继承api</sys:String>
+    <sys:String x:Key="res_Text1_TS_message11">已保存</sys:String>
+    <sys:String x:Key="res_Text1_TS_message12">保存失败</sys:String>
+    <sys:String x:Key="res_Text1_TS_message13">安装成功</sys:String>
+    <sys:String x:Key="res_Text1_TS_message14">安装失败</sys:String>
+    <sys:String x:Key="res_Text1_TS_message15">mod的配置文件有误</sys:String>
+
+</ResourceDictionary>

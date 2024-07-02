@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="desktopPet1_expansion_ldnn.PublicClass1.ModSettings.ModSettingsUI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:desktopPet1_expansion_ldnn.PublicClass1.ModSettings"
+             mc:Ignorable="d" 
+             d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionarys/Slider1.xaml"/>
+                <ResourceDictionary Source="Dictionarys/CheckBox1.xaml"/>
+                <ResourceDictionary Source="Dictionarys/ContentControl1.xaml"/>
+                <ResourceDictionary Source="Dictionarys/Button1.xaml"/>
+                <ResourceDictionary Source="Dictionarys/Label/Label1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel Margin="0,0,5,0">
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="Foreground" Value="DimGray"/>
+            </Style>
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource Label1}">
+                <Setter Property="Foreground" Value="DimGray"/>
+            </Style>
+        </StackPanel.Resources>
+
+        <ContentControl Padding="4" Style="{DynamicResource ContentControl1}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="恢复默认值" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                <Button Content="恢复" Padding="8,4,8,4" VerticalAlignment="Center" Style="{DynamicResource Button1}" Click="Button_Click"/>
+            </StackPanel>
+        </ContentControl>
+        
+        <ContentControl Padding="4" Style="{DynamicResource ContentControl1}">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding ElementName=i1_slider1, Path=Value, StringFormat={}{0:F1}}" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                    <Slider Value="{Binding Path=scaleTransform}" Name="i1_slider1" Width="100" Minimum="0.5" Maximum="1.5" VerticalAlignment="Center" Style="{DynamicResource Slider1}"/>
+                </StackPanel>
+                <Label Content="宠物缩放" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </DockPanel>
+        </ContentControl>
+
+        <ContentControl Padding="4" Style="{DynamicResource ContentControl1}">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding ElementName=i2_slider1, Path=Value, StringFormat={}{0}ms}" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                    <Slider Value="{Binding Path=messageDelay}" Name="i2_slider1" Width="100" Minimum="100" Maximum="1000" IsSnapToTickEnabled="True" VerticalAlignment="Center" Style="{DynamicResource Slider1}"/>
+                </StackPanel>
+                <Label Content="消息延迟" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </DockPanel>
+        </ContentControl>
+
+        <ContentControl Margin="4" Style="{DynamicResource ContentControl1}">
+            <DockPanel>
+                <CheckBox DockPanel.Dock="Right" IsChecked="{Binding Path=autoAdd}" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{DynamicResource CheckBox1}"/>
+                <Label Content="自动添加" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </DockPanel>
+        </ContentControl>
+
+        <ContentControl Margin="4" Style="{DynamicResource ContentControl1}">
+            <DockPanel>
+                <CheckBox DockPanel.Dock="Right" IsChecked="{Binding Path=isDebug}" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{DynamicResource CheckBox1}"/>
+                <Label Content="打开调试" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </DockPanel>
+        </ContentControl>
+    </StackPanel>
+</UserControl>

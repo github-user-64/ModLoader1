@@ -1,0 +1,267 @@
+﻿<ListBoxItem x:Class="ModLoaderLibrary1.ModManager.UserControls.items.item1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="50" d:DesignWidth="600"
+             Background="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.Back1}"
+             BorderBrush="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.Bord1}"
+             HorizontalContentAlignment="Stretch"
+             VerticalContentAlignment="Stretch"
+             IsTabStop="False"
+             FocusVisualStyle="{x:Null}"
+             BorderThickness="1"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <ListBoxItem.Style>
+        <Style TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Grid SnapsToDevicePixels="true">
+                            <ContentPresenter Margin="3,0,0,0" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                            <!--显示是否选中[-->
+                            <Border Background="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.IsSelected.Back1}" Width="6" Margin="0,8,0,8" CornerRadius="3" RenderTransformOrigin="0,0.5" HorizontalAlignment="Left">
+                                <Border.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleY="0"/>
+                                    </TransformGroup>
+                                </Border.RenderTransform>
+                                <Border.Style>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="Opacity" Value="0"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=IsSelected}" Value="True">
+                                                <DataTrigger.EnterActions>
+                                                    <BeginStoryboard>
+                                                        <Storyboard>
+                                                            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+                                                                 From="0" To="1.1" Duration="0:0:0.2" DecelerationRatio="1"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+                                                                 To="1" Duration="0:0:0.1" DecelerationRatio="1" BeginTime="0:0:0.2"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                                 From="0" To="1" Duration="0:0:0.1" DecelerationRatio="1"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </DataTrigger.EnterActions>
+                                                <DataTrigger.ExitActions>
+                                                    <BeginStoryboard>
+                                                        <Storyboard>
+                                                            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+                                                                 From="1" To="0" Duration="0:0:0.2" DecelerationRatio="1"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                                 From="1" To="0" Duration="0:0:0.1" DecelerationRatio="1"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </DataTrigger.ExitActions>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                            </Border>
+                            <!--显示是否选中]-->
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </ListBoxItem.Style>
+
+    <ListBoxItem.Resources>
+        <Style TargetType="{x:Type ListBoxItem}">
+            <Setter Property="FontWeight" Value="Medium"/>
+        </Style>
+    </ListBoxItem.Resources>
+
+
+    <!--阻止事件冒泡, 让控件被按下后不被选中-->
+    <Grid MouseDown="Grid_MouseDown">
+        <!--改为Click事件选中-->
+        <Button Click="Button_Click" IsTabStop="False" FocusVisualStyle="{x:Null}">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Grid Background="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.Back1}">
+                                    <Border Name="border1" Opacity="0.5" CornerRadius="2" Visibility="Collapsed" RenderTransformOrigin="0.5,0.5" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.Bord1.IsMouseOver}" Background="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.Back1.IsMouseOver}">
+                                        <Border.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform x:Name="border_ScaleTransform"/>
+                                            </TransformGroup>
+                                        </Border.RenderTransform>
+                                    </Border>
+                                </Grid>
+
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Trigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetName="border1" Storyboard.TargetProperty="Opacity"
+                                                                     From="0.5" To="1" Duration="0:0:0.2" DecelerationRatio="1"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.EnterActions>
+                                        <Trigger.ExitActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetName="border1" Storyboard.TargetProperty="Opacity"
+                                                                     From="1" To="0.5" Duration="0:0:0.2" DecelerationRatio="1"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.ExitActions>
+                                    </Trigger>
+                                    
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Path=IsMouseOver}" Value="True"/>
+                                            <Condition Binding="{Binding Path=IsSelected}" Value="False"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <MultiDataTrigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetName="border_ScaleTransform" Storyboard.TargetProperty="ScaleX"
+                                                                     From="0.98" To="1" Duration="0:0:0.1" DecelerationRatio="1"/>
+                                                    <DoubleAnimation Storyboard.TargetName="border_ScaleTransform" Storyboard.TargetProperty="ScaleY"
+                                                                     From="0.98" To="1" Duration="0:0:0.1" DecelerationRatio="1"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </MultiDataTrigger.EnterActions>
+                                        <MultiDataTrigger.Setters>
+                                            <Setter TargetName="border1" Property="Visibility" Value="Visible"/>
+                                        </MultiDataTrigger.Setters>
+                                    </MultiDataTrigger>
+
+                                    <DataTrigger Binding="{Binding Path=IsSelected}" Value="True">
+                                        <DataTrigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetName="border_ScaleTransform" Storyboard.TargetProperty="ScaleX"
+                                                                     To="1" Duration="0:0:0.1" DecelerationRatio="1"/>
+                                                    <DoubleAnimation Storyboard.TargetName="border_ScaleTransform" Storyboard.TargetProperty="ScaleY"
+                                                                     To="1" Duration="0:0:0.1" DecelerationRatio="1"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </DataTrigger.EnterActions>
+                                        <DataTrigger.Setters>
+                                            <Setter TargetName="border1" Property="Visibility" Value="Visible"/>
+                                        </DataTrigger.Setters>
+                                    </DataTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!--部分控件为了用于触发选中的按钮不被遮挡, 所以设为不被点击-->
+            <DockPanel>
+                <DockPanel.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="IsHitTestVisible" Value="False"/>
+                    </Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="IsHitTestVisible" Value="False"/>
+                    </Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="IsHitTestVisible" Value="False"/>
+                    </Style>
+                </DockPanel.Resources>
+
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                    <Border Margin="6" CornerRadius="8" Width="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=ActualHeight}">
+                        <Border.Background>
+                            <ImageBrush Stretch="Fill">
+                                <ImageBrush.ImageSource>
+                                    <Binding Path="mod_Ico_ImageSource">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>/ModLoaderLibrary1;component/ModManager/Resources1/Images1/ValueIsNull/a1.png</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </ImageBrush.ImageSource>
+                            </ImageBrush>
+                        </Border.Background>
+                    </Border>
+                    <Border Name="mod_disabledIco_border1" Width="20" Height="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=ActualWidth}" Margin="0,0,2,2" Padding="4" BorderThickness="2" CornerRadius="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=ActualWidth}" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                            Background="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.DisabledIco1.Fore1}"
+                            BorderBrush="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.DisabledIco1.Back1}">
+                        <Viewbox Stretch="Uniform">
+                            <Border Width="20" Height="5" Background="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.DisabledIco1.Back1}" CornerRadius="2"/>
+                        </Viewbox>
+                    </Border>
+                </Grid>
+                <StackPanel Margin="2, 0, 0, 0" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Name="mod_title_label1" IsHitTestVisible="False" Content="{Binding Path=mod_Title, TargetNullValue=Null}" Margin="2,0,2,0" FontSize="14" VerticalAlignment="Bottom">
+                            <Label.Style>
+                                <Style TargetType="{x:Type Label}">
+                                    <Setter Property="Foreground" Value="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.mod_Title.Fore1}"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Label}">
+                                                <TextBlock Text="{TemplateBinding Content}" TextTrimming="CharacterEllipsis"/>
+                                                <ControlTemplate.Triggers>
+                                                    <DataTrigger Binding="{Binding Path=IsSelected}" Value="True">
+                                                        <Setter Property="Foreground" Value="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.mod_Title.Fore1.IsSelected}"/>
+                                                    </DataTrigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Label.Style>
+                        </Label>
+                        <TextBlock Text="|" Margin="8,0,8,2" Opacity="0.5" Foreground="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.mod_Version.Fore1}" FontSize="13" VerticalAlignment="Bottom"/>
+                        <TextBlock Text="{Binding Path=mod_Version, TargetNullValue=Null}" Margin="2,0,2,0" FontSize="13" Foreground="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.mod_Version.Fore1}" TextTrimming="CharacterEllipsis" VerticalAlignment="Bottom"/>
+                    </StackPanel>
+                    <!--显示全部mod的详细信息需要能被鼠标命中, 但是会把用于触发选中的按钮遮挡, 所以只能用按钮包起来-->
+                    <Button Background="Transparent" HorizontalAlignment="Left" IsTabStop="False" Click="Button_Click">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <ContentPresenter SnapsToDevicePixels="true"/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        <Label Content="{Binding Path=mod_Information, TargetNullValue=Null}" FontSize="12" Foreground="{DynamicResource Res1.Colors1.Styles1.Style1.Item1.mod_Information.Fore1}" Style="{DynamicResource Label1}"/>
+                    </Button>
+                </StackPanel>
+            </DockPanel>
+            <!--鼠标悬浮时显示的按钮[-->
+            <StackPanel Grid.Column="1" Margin="0,0,6,0" Orientation="Horizontal" VerticalAlignment="Center">
+                <StackPanel.Style>
+                    <Style TargetType="{x:Type StackPanel}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver}" Value="false">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackPanel.Style>
+                <Button Content="&#xe78a;" Tag="{DynamicResource res_Text1_modItem1_openModFolder}" FontSize="16" FontFamily="/ModLoaderLibrary1;component/ModManager/Resources1/Fonts1/#iconfont"
+                        Style="{DynamicResource Button3}" Margin="2,0,2,0" Click="Buttons1_openModFolder_Click"/>
+                <Button Content="&#xe60f;" Tag="{DynamicResource res_Text1_modItem1_settings}" FontSize="16" FontFamily="/ModLoaderLibrary1;component/ModManager/Resources1/Fonts1/#iconfont"
+                        Style="{DynamicResource Button3}" Margin="2,0,2,0" Click="Buttons1_settings_Click"/>
+                <Button Name="Buttons1_EnableOrDisable" Content="&#xe64b;" Tag="{DynamicResource res_Text1_modItem1_disableMod}" FontSize="16" FontFamily="/ModLoaderLibrary1;component/ModManager/Resources1/Fonts1/#iconfont"
+                        Style="{DynamicResource Button3}" Margin="2,0,2,0" Click="Buttons1_EnableOrDisableMod_Click"/>
+                <Button Content="&#xe685;" Tag="{DynamicResource res_Text1_modItem1_deleteMod}" FontSize="16" FontFamily="/ModLoaderLibrary1;component/ModManager/Resources1/Fonts1/#iconfont"
+                        Style="{DynamicResource Button3}" Margin="2,0,2,0" Click="Buttons1_deleteMod_Click"/>
+            </StackPanel>
+            <!--鼠标悬浮时显示的按钮]-->
+        </Grid>
+    </Grid>
+</ListBoxItem>

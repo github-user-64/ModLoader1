@@ -1,0 +1,4 @@
+{
+  "Config": "config\\config.json",
+  "LoadConfig": "config\\loadConfig.json"
+}

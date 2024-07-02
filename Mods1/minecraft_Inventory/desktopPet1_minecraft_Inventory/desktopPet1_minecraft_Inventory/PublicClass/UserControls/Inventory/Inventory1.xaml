@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="desktopPet1_minecraft_Inventory.PublicClass.UserControls.Inventory.Inventory1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:desktopPet1_minecraft_Inventory.PublicClass.UserControls.Inventory"
+             mc:Ignorable="d" 
+             d:DesignWidth="800"
+             RenderOptions.BitmapScalingMode="NearestNeighbor"
+             HorizontalAlignment="Center" VerticalAlignment="Bottom">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/desktopPet1_minecraft_Inventory;component/Resources/Dictionarys/Thumb1.xaml"/>
+                <ResourceDictionary Source="/desktopPet1_minecraft_Inventory;component/Resources/Dictionarys/ContextMenus/ContextMenu1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <!--外面包个Border并设置宽度, 缩放设置在里面的Grid-->
+    <!--这个结构不能改, 不然因为缩放导致拖动到实际位置在窗体外的情况下, 控件会出问题(控件的横向大小被压缩了)-->
+    <Border Name="border1">
+        <Grid Name="border1_grid1">
+            <!--#region 边框 -->
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <!--因为比装item的容器大了8, 并且控件超出父级会被裁剪, 所以加个Margin用来扩大父级-->
+                <Rectangle Margin="8" Width="{Binding ElementName=Inventory_StackPanel1, Path=ActualWidth}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Border Name="Inventory_Checked_Border_Bottom_Border1" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Rectangle Width="88" Height="88"/>
+                </Border>
+            </Grid>
+
+            <Border BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Rectangle Width="{Binding ElementName=Inventory_StackPanel1, Path=ActualWidth}" Height="{Binding ElementName=Inventory_StackPanel1, Path=ActualHeight}"/>
+            </Border>
+            <!--#endregion-->
+
+            <StackPanel Name="Inventory_StackPanel1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <!--因为比装item的容器大了8, 并且控件超出父级会被裁剪, 所以加个Margin用来扩大父级-->
+                <Rectangle Margin="8" Width="{Binding ElementName=Inventory_StackPanel1, Path=ActualWidth}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Image Name="Inventory_Checked_Border_Image1" Width="96" Height="88" IsHitTestVisible="False" Source="/desktopPet1_minecraft_Inventory;component/Resources/Images/Inventory/item_select.png" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Grid>
+
+            <Thumb Name="Thumb1" Background="#a0000000" Visibility="Collapsed" Style="{DynamicResource Thumb1}" DragDelta="e_Thumb_DragDelta"/>
+        </Grid>
+    </Border>
+</UserControl>

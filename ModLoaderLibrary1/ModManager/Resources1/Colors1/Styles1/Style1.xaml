@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Window.Title.Fore1" Color="#444444"/>
+    
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.Back1" Color="White"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.Back1.IsMouseOver" Color="#FFD5E4FF"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.Bord1" Color="White"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.Bord1.IsMouseOver" Color="#FFB0CCFF"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.mod_Title.Fore1" Color="#222222"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.mod_Title.Fore1.IsSelected" Color="#116FCE"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.mod_Version.Fore1" Color="DarkGray"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.mod_Information.Fore1" Color="Gray"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.IsSelected.Back1" Color="#116FCE"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.DisabledIco1.Back1" Color="White"/>
+    <SolidColorBrush x:Key="Res1.Colors1.Styles1.Style1.Item1.DisabledIco1.Fore1" Color="DimGray"/>
+
+</ResourceDictionary>

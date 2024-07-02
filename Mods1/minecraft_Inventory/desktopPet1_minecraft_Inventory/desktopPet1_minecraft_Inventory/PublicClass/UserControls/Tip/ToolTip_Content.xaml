@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="desktopPet1_minecraft_Inventory.PublicClass.UserControls.Tip.ToolTip_Content"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             HorizontalAlignment="Center" VerticalAlignment="Center"
+                RenderOptions.BitmapScalingMode="NearestNeighbor">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../../Resources/Dictionarys/Container/Container1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Viewbox Name="ScaleTransform_Viewbox1">
+        <ContentControl Name="ContentControl1" Padding="8" Style="{DynamicResource Container1}">
+            <TextBlock x:Name="TextBlock1" FontSize="22" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/desktopPet1_minecraft_Inventory;component/Resources/Fonts/#Minecraft AE Pixel"/>
+        </ContentControl>
+    </Viewbox>
+</UserControl>
