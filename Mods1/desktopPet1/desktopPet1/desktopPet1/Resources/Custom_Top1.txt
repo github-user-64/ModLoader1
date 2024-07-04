@@ -1,0 +1,6 @@
+﻿<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+<my:MyButton1 Margin="6" Content="欸嘿:P" ClickAction="open" Datas="https://space.bilibili.com/397516613?spm_id_from=333.1007.0.0"/>
+<my:MyButton1 Margin="6" Content="弹窗" ClickAction="popup" Datas="标题|内容"/>
+</StackPanel>
+
+<!--欸嘿～(∠・ω )⌒☆-->
